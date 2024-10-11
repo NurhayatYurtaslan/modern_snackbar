@@ -41,7 +41,9 @@ class HomePage extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  const ModernSnackbar(
+                  ModernSnackbar(
+                    description: 'Modern Snackbar Custom',
+                    descColor: Colors.black,
                     titleColor: Colors.purple,
                     title: 'Snackbar Custom',
                     icon: Icons.person,
@@ -55,7 +57,8 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  const ModernSnackbar(
+                  ModernSnackbar(
+                    description: 'Modern Snacbar Error',
                     titleColor: Colors.red,
                     title: 'Error',
                     icon: Icons.error,
@@ -69,11 +72,11 @@ class HomePage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  const ModernSnackbar(
+                  ModernSnackbar(
+                    description: 'Modern Cnackbar Success',
                     titleColor: Colors.green,
                     title: 'Success',
                     icon: Icons.check,
-                    
                     backgroundColor: Colors.green,
                   ).show(context); // Automatically shows the snackbar
                 },
