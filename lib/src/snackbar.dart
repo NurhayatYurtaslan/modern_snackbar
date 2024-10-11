@@ -3,15 +3,25 @@ library modern_snackbar;
 import 'package:flutter/material.dart';
 
 class ModernSnackbar {
-  final Color titleColor;
-  final String title;
-  final Color backgroundColor;
   final IconData icon;
+  final String title;
+  final String description;
+  double width;
+  double height;
+  Color descColor;
+  Color iconColor;
+  Color backgroundColor;
+  Color titleColor;
 
-  const ModernSnackbar({
-    required this.titleColor,
+  ModernSnackbar(
+    {required this.description, 
+    this.height = 100,
+    this.width = 100,
+    this.titleColor = Colors.green,
+    this.iconColor = Colors.white,
+    this.descColor = Colors.grey,
+    this.backgroundColor = Colors.green,
     required this.title,
-    required this.backgroundColor,
     required this.icon,
   });
 
@@ -25,8 +35,8 @@ class ModernSnackbar {
         children: [
           Expanded(
             child: Container(
-              width: 300,
-              height: 100,
+              width: width,
+              height: height,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16.0),
@@ -48,9 +58,9 @@ class ModernSnackbar {
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black,
-                              blurRadius: 8.0,
-                              offset: Offset(4, 0),
+                              color: Color.fromARGB(255, 67, 66, 66),
+                              blurRadius: 5.0,
+                              offset: Offset(2, 0),
                             ),
                           ],
                         ),
@@ -58,8 +68,8 @@ class ModernSnackbar {
                       ClipPath(
                         clipper: DShapeClipper(),
                         child: Container(
-                          width: 80,
-                          height: 100,
+                          width: width / 1.5,
+                          height: height,
                           decoration: BoxDecoration(
                             color: backgroundColor,
                             borderRadius: const BorderRadius.only(
@@ -70,8 +80,8 @@ class ModernSnackbar {
                           child: Center(
                             child: Icon(
                               icon,
-                              color: Colors.white,
-                              size: 32.0,
+                              color: iconColor,
+                              size: height / 2,
                             ),
                           ),
                         ),
@@ -94,9 +104,9 @@ class ModernSnackbar {
                           ),
                         ),
                         const SizedBox(height: 4.0),
-                        const Text(
-                          'Lorem ipsum dolor sit amet.',
-                          style: TextStyle(color: Colors.grey),
+                        Text(
+                          description,
+                          style: TextStyle(color: descColor),
                         ),
                       ],
                     ),
