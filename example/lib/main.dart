@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Modern Snackbar Example',
+      title: 'Modern Snackbar Package',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.purple,
         title: const Text(
-          'Modern Snackbar Example',
+          'Modern Snackbar Package',
           style: TextStyle(color: Colors.white),
         ),
       ),
