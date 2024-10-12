@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text('Warning Snackbar'),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               ElevatedButton(
