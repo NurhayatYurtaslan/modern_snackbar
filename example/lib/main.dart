@@ -82,6 +82,36 @@ class HomePage extends StatelessWidget {
                 },
                 child: const Text('Success Snackbar'),
               ),
+              const SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  ModernSnackbar(
+                    description: 'Modern Snackbar Warning',
+                    titleColor: Colors.yellow,
+                    title: 'Waring',
+                    icon: Icons.error_rounded,
+                    backgroundColor: Colors.yellow,
+                  ).show(context); // Automatically shows the snackbar
+                },
+                child: const Text('Warning Snackbar'),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  ModernSnackbar(
+                    description: 'Modern Snackbar Well Done',
+                    titleColor: Colors.orange,
+                    title: 'Well Done',
+                    icon: Icons.check,
+                    backgroundColor: Colors.orange,
+                  ).show(context); // Automatically shows the snackbar
+                },
+                child: const Text('Well Done Snackbar'),
+              ),
             ]),
       ),
     );
